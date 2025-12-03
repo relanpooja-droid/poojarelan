@@ -7,117 +7,109 @@
   <meta name="Generator" content="Cocoa HTML Writer">
   <meta name="CocoaVersion" content="2685.1">
   <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000; min-height: 14.0px}
+    span.s1 {font-kerning: none}
   </style>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="en"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Support the Film — Pooja Relan&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* Simple, cinematic hero with your photo as background */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>:root{--accent:#e50914;--bg-overlay:rgba(0,0,0,0.55)}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>*{box-sizing:border-box}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;color:#fff}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hero{position:relative;min-height:100vh;background:#000;display:flex;align-items:center;justify-content:center;overflow:hidden}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* Background image (replace me.jpg with your actual photo file) */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hero::before{content:"";position:absolute;inset:0;background-image:url('me.jpg');background-size:cover;background-position:center;filter:brightness(0.7) contrast(1.02);z-index:0}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* Soft dark overlay to make text readable */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.65));z-index:1}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.container{position:relative;z-index:2;max-width:1100px;padding:40px;width:100%;display:grid;grid-template-columns:1fr 340px;gap:40px;align-items:center}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* Left column - intro text */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.intro h1{font-size:clamp(28px,4vw,48px);margin:0 0 12px;letter-spacing:0.4px}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.intro p.lead{opacity:0.95;margin:0 0 20px;font-size:clamp(16px,1.6vw,18px);line-height:1.5}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.intro p.small{opacity:0.85;font-size:0.95rem}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.cta-row{display:flex;gap:12px;margin-top:22px;flex-wrap:wrap}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.btn{background:var(--accent);border:none;color:#fff;padding:12px 18px;border-radius:8px;font-weight:600;cursor:pointer}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.ghost{background:transparent;border:1px solid rgba(255,255,255,0.12);}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* Right column - QR and short blurb */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.card{background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015));padding:20px;border-radius:12px;border:1px solid rgba(255,255,255,0.04);text-align:center}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.card h3{margin:0 0 8px;font-size:1.1rem}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.qr{width:220px;height:220px;margin:10px auto;border-radius:8px;background:#fff;padding:10px;display:flex;align-items:center;justify-content:center}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.qr img{max-width:100%;height:auto;display:block}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.upi{margin-top:10px;font-size:0.95rem;word-break:break-all}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.credit{opacity:0.7;margin-top:12px;font-size:0.9rem}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* Responsive */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>@media (max-width:940px){</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.container{grid-template-columns:1fr;gap:18px;padding:28px}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.card{order:2}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>footer{position:relative;z-index:2;text-align:center;padding:28px 20px;color:rgba(255,255,255,0.65);font-size:0.9rem}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;section class="hero"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="intro"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h1&gt;Help Me Make This Film — Without Permission&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="lead"&gt;I’m Pooja Relan. I’ve been told "no" more times than I can count. This film exists because it must. Join me — be one of the few who say yes.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="small"&gt;This page shows my photograph in the background (replace &lt;code&gt;me.jpg&lt;/code&gt; in the site folder with your portrait). The QR on the right will let people pay quickly via UPI.&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="cta-row"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;button class="btn" onclick="scrollToCard()"&gt;Contribute&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;a class="btn ghost" href="#story" style="text-decoration:none;color:inherit;padding:11px 16px;border-radius:8px"&gt;Read my story&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;aside class="card" id="paymentCard"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Scan &amp; Contribute&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="qr"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;!-- Replace qr.png with your generated UPI QR image or use a static image. --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;img src="qr.png" alt="Scan to pay" id="qrImg" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="upi"&gt;&lt;strong&gt;UPI ID:&lt;/strong&gt; relanpooja-2@okicici&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="credit"&gt;Any amount helps — your name will appear in the credits.&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div style="margin-top:12px"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;button class="btn" onclick="copyUpi()"&gt;Copy UPI ID&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/aside&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Short story section (anchor target) --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="story" style="position:relative;z-index:2;max-width:800px;margin:36px auto;padding:0 20px;color:rgba(255,255,255,0.95)"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2 style="font-size:1.4rem;margin-top:8px"&gt;Why this film&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p style="opacity:0.92;line-height:1.5"&gt;My films are messy, loud and human. They’re made for the people who have been told to wait. Your support will go directly to production costs — camera, crew, locations, and post.</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;footer&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>Made with belief, not permission. — Pooja Relan</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/footer&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>function copyUpi(){</p>
-<p class="p1"><span class="Apple-converted-space">      </span>const upi = 'relanpooja-2@okicici';</p>
-<p class="p1"><span class="Apple-converted-space">      </span>navigator.clipboard?.writeText(upi).then(()=&gt;{</p>
-<p class="p1"><span class="Apple-converted-space">        </span>alert('UPI ID copied to clipboard')</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}).catch(()=&gt;{ alert('Copy failed. Please copy manually: ' + upi) })</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>function scrollToCard(){</p>
-<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById('paymentCard').scrollIntoView({behavior:'smooth', block:'center'})</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- USAGE NOTES:</p>
-<p class="p1"><span class="Apple-converted-space">       </span>1) Replace 'me.jpg' with your portrait (same folder). Keep it high-res and portrait/landscape both work.</p>
-<p class="p1"><span class="Apple-converted-space">       </span>2) Generate a UPI QR (many apps/websites let you create a QR PNG from your UPI id) and save it as 'qr.png' next to this file.</p>
-<p class="p1"><span class="Apple-converted-space">       </span>3) Deploy to Netlify (drag &amp; drop) or GitHub Pages. Both accept image files in the same repo.</p>
-<p class="p1"><span class="Apple-converted-space">       </span>4) If you want, I can: embed a Razorpay button instead of the QR, or generate the exact QR image for you if you paste your UPI again.</p>
-<p class="p1"><span class="Apple-converted-space">  </span>--&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
+<p class="p1"><span class="s1">&lt;html lang="en"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;head&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8" /&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;title&gt;Support the Film — Pooja Relan&lt;/title&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;style&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>/* Simple, cinematic hero with your photo as background */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>:root{--accent:#e50914;--bg-overlay:rgba(0,0,0,0.55)}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>*{box-sizing:border-box}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;color:#fff}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.hero{position:relative;min-height:100vh;background:#000;display:flex;align-items:center;justify-content:center;overflow:hidden}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>/* Background image (replace me.jpg with your actual photo file) */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.hero::before{content:"";position:absolute;inset:0;background-image:url('me.jpg');background-size:cover;background-position:center;filter:brightness(0.7) contrast(1.02);z-index:0}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>/* Soft dark overlay to make text readable */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.65));z-index:1}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.container{position:relative;z-index:2;max-width:1100px;padding:40px;width:100%;display:grid;grid-template-columns:1fr 340px;gap:40px;align-items:center}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>/* Left column - intro text */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.intro h1{font-size:clamp(28px,4vw,48px);margin:0 0 12px;letter-spacing:0.4px}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.intro p.lead{opacity:0.95;margin:0 0 20px;font-size:clamp(16px,1.6vw,18px);line-height:1.5}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.intro p.small{opacity:0.85;font-size:0.95rem}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.cta-row{display:flex;gap:12px;margin-top:22px;flex-wrap:wrap}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.btn{background:var(--accent);border:none;color:#fff;padding:12px 18px;border-radius:8px;font-weight:600;cursor:pointer}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.ghost{background:transparent;border:1px solid rgba(255,255,255,0.12);}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>/* Right column - QR and short blurb */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.card{background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015));padding:20px;border-radius:12px;border:1px solid rgba(255,255,255,0.04);text-align:center}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.card h3{margin:0 0 8px;font-size:1.1rem}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.qr{width:220px;height:220px;margin:10px auto;border-radius:8px;background:#fff;padding:10px;display:flex;align-items:center;justify-content:center}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.qr img{max-width:100%;height:auto;display:block}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.upi{margin-top:10px;font-size:0.95rem;word-break:break-all}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.credit{opacity:0.7;margin-top:12px;font-size:0.9rem}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>/* Responsive */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>@media (max-width:940px){</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>.container{grid-template-columns:1fr;gap:18px;padding:28px}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>.card{order:2}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>footer{position:relative;z-index:2;text-align:center;padding:28px 20px;color:rgba(255,255,255,0.65);font-size:0.9rem}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
+<p class="p1"><span class="s1">&lt;body&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;section class="hero"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="container"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="intro"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h1&gt;Help Me Make This Film — Without Permission&lt;/h1&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="lead"&gt;I’m Pooja Relan. I’ve been told "no" more times than I can count. This film exists because it must. Join me — be one of the few who say yes.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="small"&gt;This page shows my photograph in the background (replace &lt;code&gt;me.jpg&lt;/code&gt; in the site folder with your portrait). The QR on the right will let people pay quickly via UPI.&lt;/p&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="cta-row"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;button class="btn" onclick="scrollToCard()"&gt;Contribute&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;a class="btn ghost" href="#story" style="text-decoration:none;color:inherit;padding:11px 16px;border-radius:8px"&gt;Read my story&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;aside class="card" id="paymentCard"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Scan &amp; Contribute&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="qr"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;!-- Replace qr.png with your generated UPI QR image or use a static image. --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;img src="qr.png" alt="Scan to pay" id="qrImg" /&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="upi"&gt;&lt;strong&gt;UPI ID:&lt;/strong&gt; relanpooja-2@okicici&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="credit"&gt;Any amount helps — your name will appear in the credits.&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div style="margin-top:12px"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;button class="btn" onclick="copyUpi()"&gt;Copy UPI ID&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/aside&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;!-- Short story section (anchor target) --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div id="story" style="position:relative;z-index:2;max-width:800px;margin:36px auto;padding:0 20px;color:rgba(255,255,255,0.95)"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;h2 style="font-size:1.4rem;margin-top:8px"&gt;Why this film&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;p style="opacity:0.92;line-height:1.5"&gt;My films are messy, loud and human. They’re made for the people who have been told to wait. Your support will go directly to production costs — camera, crew, locations, and post.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;footer&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>Made with belief, not permission. — Pooja Relan</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/footer&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;script&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>function copyUpi(){</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const upi = 'relanpooja-2@okicici';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>navigator.clipboard?.writeText(upi).then(()=&gt;{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>alert('UPI ID copied to clipboard')</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}).catch(()=&gt;{ alert('Copy failed. Please copy manually: ' + upi) })</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>function scrollToCard(){</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>document.getElementById('paymentCard').scrollIntoView({behavior:'smooth', block:'center'})</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</span></p>
 </body>
 </html>
